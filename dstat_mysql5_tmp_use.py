@@ -52,5 +52,8 @@ class dstat_plugin(dstat):
         except Exception, e:
             for name in self.vars:
                 self.val[name] = -1
+        
+        finally:
+            cur.close()
 
 # vim:ts=4:sw=4:et
